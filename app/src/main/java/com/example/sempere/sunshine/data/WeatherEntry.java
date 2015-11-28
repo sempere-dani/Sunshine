@@ -3,11 +3,13 @@ package com.example.sempere.sunshine.data;
 import android.provider.BaseColumns;
 
 /**
- * Created by dani on 25/11/2015.
+ * Created by dani on 28/11/2015.
  */
-public class WeatherEntry implements BaseColumns {
+/* Inner class that defines the table contents of the weather table */
+public  final class WeatherEntry implements BaseColumns {
 
     public static final String TABLE_NAME = "weather";
+
     // Column with the foreign key into the location table.
     public static final String COLUMN_LOC_KEY = "location_id";
     // Date, stored as long in milliseconds since the epoch
@@ -16,6 +18,7 @@ public class WeatherEntry implements BaseColumns {
     public static final String COLUMN_WEATHER_ID = "weather_id";
 
     // Short description and long description of the weather, as provided by API.
+    // e.g "clear" vs "sky is clear".
     public static final String COLUMN_SHORT_DESC = "short_desc";
 
     // Min and max temperatures for the day (stored as floats)
@@ -34,4 +37,3 @@ public class WeatherEntry implements BaseColumns {
     // Degrees are meteorological degrees (e.g, 0 is north, 180 is south).  Stored as floats.
     public static final String COLUMN_DEGREES = "degrees";
 }
-
